@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="estate_property_from">
+        <field name="name">estate.property.from</field>
+        <field name="model">estate.property.kk</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="price"/>
+                            <field name="status"/>
+                        </group>
+                        <group>
+                            <field name="partner_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="estate_property_tree">
+        <field name="name">estate.property.tree</field>
+        <field name="model">estate.property.kk</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="price"/>
+                <field name="status"/>
+                <field name="partner_id"/>
+            </tree>
+        </field>
+    </record>
+    <record id="estate_property__viwe" model="ir.actions.act_window">
+        <field name="name">Estate Property</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.property.kk</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="estate_property_menu"
+              name="Estate Property"
+              sequence="15"/>
+
+    <menuitem id="estate_property_in"
+              name="Estate Property"
+              parent="estate_property_menu"
+              action="estate_property__viwe"
+              sequence="10"/>
+</odoo>
+

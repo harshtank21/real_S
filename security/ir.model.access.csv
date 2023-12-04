@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+real_s.access_estate_property_kk,access_estate_property_kk,real_s.model_estate_property_kk,base.group_user,1,1,1,1
